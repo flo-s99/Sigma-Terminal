@@ -202,6 +202,6 @@ def reddit():
     df = df.astype(float)
     colors = ['red', 'springgreen', 'forestgreen', 'coral']
     df.plot(kind = 'bar', color=colors, title=f"Sentiment analysis of top {picks_ayz} picks:")
-    plt.show()
     plt.savefig('SentimentStockAnalysis.png')
+    plt.show();
 reddit()

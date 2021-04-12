@@ -1,3 +1,4 @@
+from numpy.core.defchararray import index
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -60,6 +61,7 @@ print(port_risk.min())
 # Plot Minimum-Variance-Portfolio
 min_var = pd.Series(min_var, index=names)
 min_var = min_var.sort_values()
+min_var.to_csv('min_var.csv')
 fig = plt.figure()
 ax1 = fig.add_axes([0.1,0.1,0.8,0.8])
 ax1.set_xlabel('Asset')
@@ -71,6 +73,7 @@ plt.show()
 # Plot Tangency Portfolio Combination
 max_sr = pd.Series(max_sr, index=names)
 max_sr = max_sr.sort_values()
+max_sr.to_csv('max_sr.csv')
 fig = plt.figure()
 ax1 = fig.add_axes([0.1,0.1,0.8,0.8])
 ax1.set_xlabel('Asset')
@@ -86,4 +89,5 @@ ax1.set_xlabel('Risk')
 ax1.set_ylabel("Returns")
 ax1.set_title("Portfolio optimization and Efficient Frontier")
 plt.scatter(port_risk, port_returns)
+plt.savefig('eff_frontier.png')
 plt.show();
