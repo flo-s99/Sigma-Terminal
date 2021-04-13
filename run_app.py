@@ -1,3 +1,3 @@
 from _main_ import app
 
-app.run_server(debug=True, host='sigma-terminal')
+app.run_server(debug=True)

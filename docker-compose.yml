@@ -7,6 +7,6 @@ services:
     volumes:
       - .:/usr/src/sigma_terminal
     ports:
-      - "to:from"
+      - 5000:80
     environment:
       - TARGET=$TARGET
