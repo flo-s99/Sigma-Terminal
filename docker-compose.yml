@@ -1,0 +1,12 @@
+version: "3.7"
+
+services:
+  sigma_terminal:
+    build:
+      context: .
+    volumes:
+      - .:/usr/src/sigma_terminal
+    ports:
+      - "to:from"
+    environment:
+      - TARGET=$TARGET
