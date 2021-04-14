@@ -2,7 +2,7 @@ import sqlite3
 
 # Run script once to create local database
 
-connection = sqlite3.connect('database.db')
+connection = sqlite3.connect("/Users/user/Dev/Sigma-Terminal/database.db")
 
 cursor = connection.cursor()
 
@@ -10,7 +10,7 @@ cursor.execute("""
     CREATE TABLE IF NOT EXISTS stock (
         id INTEGER PRIMARY KEY, 
         symbol TEXT NOT NULL UNIQUE, 
-        company TEXT NOT NULL
+        name TEXT NOT NULL
     )
 """)
 
@@ -23,7 +23,6 @@ cursor.execute("""
         high NOT NULL, 
         low NOT NULL, 
         close NOT NULL, 
-        adjusted_close NOT NULL, 
         volume NOT NULL,
         FOREIGN KEY (stock_id) REFERENCES stock (id)
     )
