@@ -2,7 +2,7 @@ import sqlite3
 
 # Run script once to create local database
 
-connection = sqlite3.connect("/Users/user/Dev/Sigma-Terminal/database.db")
+connection = sqlite3.connect("YOURDB")
 
 cursor = connection.cursor()
 
