@@ -5,7 +5,7 @@ import csv
 
 # Connect to Database and Collection within Database
 try:
-    cluster = MongoClient('mongodb+srv://Flo:<FSMedia99!>@stock-data.rioop.mongodb.net/Stock-Data?retryWrites=true&w=majority')
+    cluster = MongoClient('YOURCLIENT')
     print('Connected')
 except:
     print('Failed')
