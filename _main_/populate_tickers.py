@@ -16,7 +16,7 @@ rows = cursor.fetchall()
 
 symbols = [row['symbol'] for row in rows] # list comprehension
 
-api = tradeapi.REST('PKHAU88ODFLYVR0U4ZK5', 'dZX4vdVPI3XdA8s91cNcWDXyBH7saEMyMDu8cesf',
+api = tradeapi.REST('YOURKEY', 'YOURKEY',
 base_url='https://paper-api.alpaca.markets')
 assets = api.list_assets()
 
