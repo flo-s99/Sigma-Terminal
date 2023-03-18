@@ -13,11 +13,11 @@ def getStockDataDaily():
     # Let User Input Stock Symbols
     symbol = 'MSFT'
     # Query Data from Alpha Vantage into pandas dataframes
-    ts = TimeSeries(key='6GBO7IYRXHROK1ZO', output_format='json')
+    ts = TimeSeries(key='YOURKEY', output_format='json')
     data, metadata = ts.get_daily_adjusted(symbol=symbol, outputsize='compact')
     print(data)
     # Getting Technical Indicators and Fundamental data
-    ti = TechIndicators(key='6GBO7IYRXHROK1ZO', output_format='json')
+    ti = TechIndicators(key='YOURKEY', output_format='json')
     dataSMA, metadataSMA = ti.get_sma(symbol=symbol, interval='daily', time_period=200, series_type='close')
     dataEMA, metadataEMA = ti.get_ema(symbol=symbol, interval='daily', time_period=200, series_type='close')
     #dataADX, metadataADX = ti.get_adx(symbol=symbol, interval='daily', time_period=200)   
@@ -34,7 +34,7 @@ def getCryptoDataDaily():
     # Let User Input Stock Symbols
     symbol = 'BTC'
     # Query Data from Alpha Vantage into pandas dataframes or json
-    cc = CryptoCurrencies(key='6GBO7IYRXHROK1ZO', output_format='json')
+    cc = CryptoCurrencies(key='YOURKEY', output_format='json')
     #dataRating, metadataRating = cc.get_digital_crypto_rating(symbol=symbol)
     dataCrypto, metadataCrypto = cc.get_digital_currency_daily(symbol=symbol, market='USD')
     print(dataCrypto)
@@ -48,9 +48,9 @@ def getStockDataIntraday30():
     # Let User Input Stock Symbols
     symbol = 'MSFT'
     # Query Data from Alpha Vantage into pandas dataframes
-    ts = TimeSeries(key='6GBO7IYRXHROK1ZO', output_format='json')
+    ts = TimeSeries(key='YOURKEY', output_format='json')
     data, metadata = ts.get_intraday(symbol=symbol, outputsize='compact', interval='30min')
     print(data)
     # Setting Technical Indicators
-    ti = TechIndicators(key='6GBO7IYRXHROK1ZO', output_format='json')
+    ti = TechIndicators(key='YOURKEY', output_format='json')
     dataSMA, metadataSMA = ti.get_sma(symbol=symbol, interval='30min', time_period=200)
