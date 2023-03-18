@@ -64,10 +64,10 @@ def reddit():
     #LogIn to Reddit
     start_time = time.time()
     reddit = praw.Reddit(user_agent="Comment Extraction",
-        client_id="po2LshsQuXgP4Q",
-        client_secret="VqTZoM8QIQXcHB9bwGJ2wZLJUBXxFQ",
-        username="flo12345sta",
-        password="Stanglmeier99")
+        client_id="",
+        client_secret="",
+        username="",
+        password="")
 
 
     # set the program parameters
